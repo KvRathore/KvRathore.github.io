@@ -197,13 +197,6 @@ body {
     height: 100%;
     grid-row: 1 / 2;
 
-    background: linear-gradient(
-        to right,
-        rgba($soft-violet, 0.5),
-        rgba($soft-violet, 0.5)
-      ),
-      url(/images/image-header-mobile.jpg);
-
     background-size: cover;
     background-position: top;
   }
@@ -221,4 +214,18 @@ body {
 
   color: $soft-violet;
   font-size: 1.5rem;
+
+  .mentor {
+    a {
+      text-decoration: underline;
+      color: $soft-violet;
+    }
+  }
+
+  .done-by {
+     a {
+       text-decoration: underline;
+       color: $soft-violet;
+     }
+  }
 }

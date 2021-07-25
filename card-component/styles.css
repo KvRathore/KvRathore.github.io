@@ -242,8 +242,6 @@ body {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
-    background: -webkit-gradient(linear, left top, right top, from(rgba(170, 92, 219, 0.5)), to(rgba(170, 92, 219, 0.5))), url(/images/image-header-mobile.jpg);
-    background: linear-gradient(to right, rgba(170, 92, 219, 0.5), rgba(170, 92, 219, 0.5)), url(/images/image-header-mobile.jpg);
     background-size: cover;
     background-position: top;
   }
@@ -269,5 +267,15 @@ body {
           align-items: center;
   color: #aa5cdb;
   font-size: 1.5rem;
+}
+
+.made-by .mentor a {
+  text-decoration: underline;
+  color: #aa5cdb;
+}
+
+.made-by .done-by a {
+  text-decoration: underline;
+  color: #aa5cdb;
 }
 /*# sourceMappingURL=styles.css.map */
