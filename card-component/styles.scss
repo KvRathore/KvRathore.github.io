@@ -174,23 +174,10 @@ body {
       rgba($soft-violet, 0.5),
       rgba($soft-violet, 0.5)
     ),
-    url(/images/image-header-mobile.jpg);
+    url(/images/image-header-desktop.jpg);
 
   background-size: cover;
   background-position: center;
-
-  @media (min-resolution: 192dpi) and (min-width: 37.5em) {
-    background: linear-gradient(
-        to right,
-        rgba($soft-violet, 0.5),
-        rgba($soft-violet, 0.5)
-      ),
-      url(./images/image-header-desktop.jpg);
-
-    background-size: cover;
-    background-position: center;
-    // height: 20rem;
-  }
 
   @media (max-width: 56.25em) {
     order: -1;
