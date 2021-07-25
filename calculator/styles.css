@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+:root {
+  --color-dark: #2c2e43;
+  --color-calc-scale: #11121a;
+  --color-dispay: #11121a;
+  --color-numpad: #393c58;
+
+  --color-num-color: #eeeeee;
+  --color-del-reset: #a8abc6;
+
+  --color-num-hover: #aaa;
+  --color-del-reset-hover: #9397b9;
+
+  --color_scale-dot: #ff6767;
+
+  --color-equal: #ff616d;
+  --color-equal-hover: #ff3f4e;
+
+  --primary-color: #fff;
+  --numpad-color: #000;
+
+  --display-num-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 40em) {
+  html {
+    font-size: 54%;
+  }
+
+  body {
+    padding: 0 2rem;
+  }
+}
+
+body {
+  width: 100%;
+  background: var(--color-dark);
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 60rem;
+  max-width: 98%;
+  height: 50rem;
+  background: var(--color-dark);
+}
+
+/* CALC TOP */
+/* CALC TOP */
+/* CALC TOP */
+/* CALC TOP */
+
+.calc__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  user-select: none;
+}
+
+.calc__theme {
+  display: flex;
+  align-items: center;
+}
+
+.theme {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-right: 2rem;
+  user-select: none;
+}
+
+.calc__num {
+  width: 6rem;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.calc__num-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  top: -2rem;
+}
+
+.number {
+  display: block;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+.calc__theme-scale {
+  width: 100%;
+  padding: 0.2rem;
+  height: 1.7rem;
+  background: var(--color-calc-scale);
+  border-radius: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.dot {
+  display: block;
+  height: 1.4rem;
+  width: 1.4rem;
+  background: var(--color_scale-dot);
+  border-radius: 50%;
+
+  position: absolute;
+
+  transition: all 0.2s;
+}
+
+.dot.initial {
+  left: 0;
+}
+
+.dot.middle {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot.end {
+  left: 100%;
+  transform: translateX(-100%);
+}
+
+/* DISPLAY */
+/* DISPLAY */
+/* DISPLAY */
+/* DISPLAY */
+
+.display {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 8rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  color: var(--display-num-color);
+  font-size: 2.5rem;
+  font-weight: 500;
+  background: var(--color-dispay);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+
+  cursor: none;
+  user-select: none;
+}
+
+/* NUMPAD */
+/* NUMPAD */
+/* NUMPAD */
+/* NUMPAD */
+/* NUMPAD */
+
+.numpad__container {
+  width: 100%;
+  height: auto;
+  padding: 1.5rem;
+  background: var(--color-numpad);
+  border-radius: 1rem;
+}
+
+.numpad {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(3rem, 1fr));
+  grid-template-rows: repeat(5, 5rem);
+  grid-gap: 1rem;
+}
+
+.numpad > * {
+  user-select: none;
+}
+
+.num {
+  width: 100%;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-num-color);
+  font-size: 2rem;
+  cursor: pointer;
+  font-weight: 500;
+  user-select: none;
+  color: var(--numpad-color);
+}
+
+.del,
+.reset {
+  background: var(--color-del-reset);
+  color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+
+.num:active {
+  transform: translateY(0.2rem);
+  background-color: var(--color-num-hover);
+}
+
+
+.del:active,
+.reset:active {
+  background: var(--color-del-reset-hover);
+}
+
+.reset {
+  grid-column: 1 / span 2;
+}
+
+.equal {
+  background: var(--color-equal);
+  grid-column: 3 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+
+.operator {
+  width: 100%;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-num-color);
+  font-size: 2rem;
+  cursor: pointer;
+  font-weight: 500;
+  user-select: none;
+}
+
+
+.operator:active {
+  background-color: var(--color-num-hover);
+}
+
+.operator:active {
+  transform: translateY(0.2rem);
+  background-color: var(--color-num-hover);
+}
+
+.equal:active {
+  background: var(--color-equal-hover);
+}
