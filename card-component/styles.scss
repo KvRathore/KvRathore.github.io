@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+$dark-blue: hsl(233, 47%, 7%);
+$dark-desaturated-blue: hsl(244, 38%, 16%);
+$soft-violet: hsl(277, 64%, 61%);
+
+$heading-white: hsl(0, 0%, 100%);
+$transparent-white: hsla(0, 0%, 100%, 0.75);
+$transparent-white-2: hsla(0, 0%, 100%, 0.6);
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: 37.5em) {
+    font-size: 50%;
+  }
+}
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  background: $dark-blue;
+}
+
+.container {
+  background: $dark-blue;
+  width: 100%;
+  min-height: 90vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  max-width: 114rem;
+  width: 100%;
+  margin: auto 5rem;
+  border-radius: 5px;
+}
+
+.card {
+  width: 100%;
+  min-height: 45rem;
+  max-height: 50rem;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  overflow: hidden;
+
+  @media (max-width: 56.25em) {
+    height: 100%;
+    grid-template-rows: 20rem 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 37.5em) {
+    max-height: 55rem;
+  }
+}
+
+.content {
+  background: $dark-desaturated-blue;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  @media (max-width: 56.25em) {
+    height: auto;
+    grid-row: 2 / 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-head {
+    width: 70%;
+    font-size: 2.9rem;
+
+    @media (max-width: 27.5em) {
+      width: 90%;
+      text-align: left;
+      margin: auto;
+      margin-top: 1rem;
+    }
+
+    &-span {
+      color: $soft-violet;
+    }
+  }
+
+  &-text {
+    width: 70%;
+    font-size: 1.6rem;
+    color: $transparent-white;
+    margin-top: -8rem;
+
+    @media (max-width: 56.25em) {
+      margin-top: -2rem;
+    }
+
+    @media (max-width: 27.5em) {
+      width: 90%;
+      text-align: left;
+      margin: auto;
+      margin-top: -1rem;
+    }
+
+    @media (max-width: 22.81em) {
+      margin-top: 1rem;
+    }
+  }
+
+  &-figures {
+    width: 70%;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    .dataset {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .data {
+        font-size: 1.9rem;
+        font-weight: 400;
+        display: block;
+
+        @media (max-width: 27.5em) {
+          font-size: 1.5rem;
+        }
+
+        &-text {
+          color: $transparent-white-2;
+          font-size: 1.4rem;
+          display: block;
+          text-transform: uppercase;
+
+          @media (max-width: 27.5em) {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 27.5em) {
+      width: 90%;
+      text-align: center;
+      margin-top: 1.5rem;
+      padding: 1rem;
+    }
+  }
+}
+
+.image-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  background: linear-gradient(
+      to right,
+      rgba($soft-violet, 0.5),
+      rgba($soft-violet, 0.5)
+    ),
+    url(/images/image-header-mobile.jpg);
+
+  background-size: cover;
+  background-position: center;
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+    background: linear-gradient(
+        to right,
+        rgba($soft-violet, 0.5),
+        rgba($soft-violet, 0.5)
+      ),
+      url(./images/image-header-desktop.jpg);
+
+    background-size: cover;
+    background-position: center;
+    // height: 20rem;
+  }
+
+  @media (max-width: 56.25em) {
+    order: -1;
+    height: 100%;
+    grid-row: 1 / 2;
+
+    background: linear-gradient(
+        to right,
+        rgba($soft-violet, 0.5),
+        rgba($soft-violet, 0.5)
+      ),
+      url(/images/image-header-mobile.jpg);
+
+    background-size: cover;
+    background-position: top;
+  }
+
+  @media (max-width: 27.5em) {
+    height: 30rem;
+  }
+}
+
+.made-by {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  align-items: center;
+
+  color: $soft-violet;
+  font-size: 1.5rem;
+}

@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  background: #090b1a;
+}
+
+.container {
+  background: #090b1a;
+  width: 100%;
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.row {
+  max-width: 114rem;
+  width: 100%;
+  margin: auto 5rem;
+  border-radius: 5px;
+}
+
+.card {
+  width: 100%;
+  min-height: 45rem;
+  max-height: 50rem;
+  border-radius: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+}
+
+@media (max-width: 56.25em) {
+  .card {
+    height: 100%;
+    -ms-grid-rows: 20rem 1fr;
+        grid-template-rows: 20rem 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .card {
+    max-height: 55rem;
+  }
+}
+
+.content {
+  background: #1b1938;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (max-width: 56.25em) {
+  .content {
+    height: auto;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.content-head {
+  width: 70%;
+  font-size: 2.9rem;
+}
+
+@media (max-width: 27.5em) {
+  .content-head {
+    width: 90%;
+    text-align: left;
+    margin: auto;
+    margin-top: 1rem;
+  }
+}
+
+.content-head-span {
+  color: #aa5cdb;
+}
+
+.content-text {
+  width: 70%;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: -8rem;
+}
+
+@media (max-width: 56.25em) {
+  .content-text {
+    margin-top: -2rem;
+  }
+}
+
+@media (max-width: 27.5em) {
+  .content-text {
+    width: 90%;
+    text-align: left;
+    margin: auto;
+    margin-top: -1rem;
+  }
+}
+
+@media (max-width: 22.81em) {
+  .content-text {
+    margin-top: 1rem;
+  }
+}
+
+.content-figures {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content-figures .dataset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.content-figures .dataset .data {
+  font-size: 1.9rem;
+  font-weight: 400;
+  display: block;
+}
+
+@media (max-width: 27.5em) {
+  .content-figures .dataset .data {
+    font-size: 1.5rem;
+  }
+}
+
+.content-figures .dataset .data-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.4rem;
+  display: block;
+  text-transform: uppercase;
+}
+
+@media (max-width: 27.5em) {
+  .content-figures .dataset .data-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 27.5em) {
+  .content-figures {
+    width: 90%;
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1rem;
+  }
+}
+
+.image-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(170, 92, 219, 0.5)), to(rgba(170, 92, 219, 0.5))), url(/images/image-header-mobile.jpg);
+  background: linear-gradient(to right, rgba(170, 92, 219, 0.5), rgba(170, 92, 219, 0.5)), url(/images/image-header-mobile.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em) {
+  .image-container {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(170, 92, 219, 0.5)), to(rgba(170, 92, 219, 0.5))), url(./images/image-header-desktop.jpg);
+    background: linear-gradient(to right, rgba(170, 92, 219, 0.5), rgba(170, 92, 219, 0.5)), url(./images/image-header-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .image-container {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    height: 100%;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(170, 92, 219, 0.5)), to(rgba(170, 92, 219, 0.5))), url(/images/image-header-mobile.jpg);
+    background: linear-gradient(to right, rgba(170, 92, 219, 0.5), rgba(170, 92, 219, 0.5)), url(/images/image-header-mobile.jpg);
+    background-size: cover;
+    background-position: top;
+  }
+}
+
+@media (max-width: 27.5em) {
+  .image-container {
+    height: 30rem;
+  }
+}
+
+.made-by {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #aa5cdb;
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=styles.css.map */
