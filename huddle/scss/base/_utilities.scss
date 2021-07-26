@@ -1,0 +1,44 @@
+.u-center-text {
+  text-align: center;
+}
+
+.u-width-4 {
+  width: 40%;
+  line-height: 1.4;
+  margin: auto;
+
+  @include respond(tab-port) {
+    width: 60%;
+  }
+
+  @include respond(landing) {
+    width: 90%;
+  }
+}
+
+.u-width-7-nocenter {
+  width: 70%;
+  line-height: 1.35;
+
+  @include respond(mobile) {
+    width: 90%;
+  }
+}
+
+.u-width-5-nocenter {
+  width: 50%;
+  line-height: 1.4;
+}
+
+// Margins ->
+.u-margin-bg {
+  margin-top: 5rem;
+}
+
+.u-margin-md {
+  margin-top: 3rem;
+}
+
+.u-margin-sm {
+  margin-top: 1.5rem;
+}

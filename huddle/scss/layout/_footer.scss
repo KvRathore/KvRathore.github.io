@@ -1,0 +1,129 @@
+.footer {
+  &__span {
+    background: $very-dark-cyan;
+    padding: 5rem 0 10rem 0;
+    margin: -0.5rem auto;
+
+    @include respond(footer) {
+      margin: -0.6rem auto;
+      padding: 8rem 0 3rem 0;
+    }
+
+    @include respond(mobile) {
+      padding: 8rem 0 1rem 0;
+    }
+  }
+
+  &__main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include respond(footer) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 5rem;
+    }
+  }
+
+  //   BRAND
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    gap: 2rem;
+
+    @include respond(footer) {
+      // flex-direction: column;
+      width: 50rem;
+      align-items: flex-start;
+
+      margin-bottom: 5rem;
+    }
+
+    @include respond(landing) {
+      width: 100%;
+    }
+  }
+
+  &__logo {
+    width: 25rem;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__mail {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .svg {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: $white;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-0.1rem);
+    }
+  }
+}
+
+.footer {
+  &__newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-basis: 40rem;
+  }
+
+  .search-box {
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+
+    @include respond(landing) {
+      flex-direction: column;
+    }
+
+    .search {
+      box-sizing: border-box;
+      padding: 0 0.5rem;
+      font-size: 1.5rem;
+      outline: none;
+      border-radius: 10px;
+      color: $very-dark-cyan;
+      font-weight: 600;
+
+      @include respond(landing) {
+        height: 3.5rem;
+      }
+    }
+  }
+}
+
+.attribution {
+  color: $white;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 2rem;
+
+  a {
+    color: $very-pale-blue;
+  }
+}
