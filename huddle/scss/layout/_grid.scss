@@ -1,0 +1,9 @@
+.row {
+  max-width: 115rem;
+  width: 100%;
+  padding: 0 1rem;
+  margin: auto;
+
+  opacity: 1;
+  transition: opacity 0.5s, transform 1s;
+}

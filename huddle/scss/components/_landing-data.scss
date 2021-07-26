@@ -1,0 +1,48 @@
+.landing__figures {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 8rem;
+
+  @include respond(mobile) {
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.landing__data {
+  width: 100%;
+  position: relative;
+  height: 10rem;
+  width: 15rem;
+  margin: auto;
+
+  @include respond(mobile) {
+    text-align: center;
+  }
+
+  &__img {
+    position: absolute;
+    top: -2rem;
+    left: -0.5rem;
+    height: 2rem;
+
+    @include respond(mobile) {
+      left: 2rem;
+    }
+  }
+
+  &-number {
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+  }
+
+  &-text {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+  }
+}

@@ -1,0 +1,60 @@
+.btn {
+  width: 14rem;
+  padding: 1.5rem 3rem;
+
+  border: none;
+  background: transparent;
+  border-radius: 100px;
+  cursor: pointer;
+
+  &-pink {
+    color: $primary-pink;
+    font-weight: 600;
+    border: 0.05rem solid $primary-pink;
+    box-shadow: 0 0.5rem 2rem rgba($primary-pink, 0.2);
+    transition: all 0.4s;
+
+    @include respond(mobile) {
+      width: 14rem;
+      font-size: 1.4rem;
+    }
+
+    @media only screen and (max-width: 18.75em) {
+      padding: 1rem 2rem;
+    }
+
+    &:hover {
+      box-shadow: 0 0.8rem 2rem rgba($primary-pink, 0.4);
+      transform: translateY(-0.2rem);
+    }
+  }
+
+  &-cta {
+    width: 25rem;
+    padding: 1.5rem 3rem;
+    color: $white;
+    background: $primary-pink;
+
+    transition: all 0.4s;
+    font-weight: 600;
+
+    &-small {
+      width: 15rem;
+      border: 1px solid $primary-pink;
+      border-radius: 10px;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-0.2rem);
+        background: lighten($color: $primary-pink, $amount: 8);
+        box-shadow: 0 0.05rem 0.5rem rgba($primary-pink, 0.8);
+      }
+    }
+
+    &:hover {
+      transform: translateY(-0.2rem);
+      background: lighten($color: $primary-pink, $amount: 8);
+      box-shadow: 0 0.2rem 1rem rgba($primary-pink, 0.8);
+    }
+  }
+}

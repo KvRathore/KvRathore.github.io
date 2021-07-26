@@ -1,0 +1,23 @@
+// Abstract
+@import './scss/abstracts/variables';
+@import './scss/abstracts/mixins';
+
+// Base
+@import './scss/base/typography';
+@import './scss/base/base';
+@import './scss/base/utilities';
+@import './scss/base/animation';
+
+// Components
+@import './scss/components/landing';
+@import './scss/components/landing-data';
+@import './scss/components/background';
+@import './scss/components/about';
+@import './scss/components/btn';
+
+// Layout
+@import './scss/layout/header';
+@import './scss/layout/footer';
+@import './scss/layout/grid';
+// Pages
+@import './scss/pages/home';
