@@ -19,6 +19,10 @@
   background-position: center;
   background-attachment: fixed;
   padding: 10rem 0;
+
+  @include respond(tab-land) {
+    background-attachment: fixed;
+  }
 }
 
 .section-plans {
