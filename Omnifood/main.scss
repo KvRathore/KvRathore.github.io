@@ -1,0 +1,26 @@
+// ABSTRACT
+@import './scss/abstract/mixin';
+@import './scss/abstract/variables';
+// BASE
+@import './scss/base/base';
+@import './scss/base/typography';
+@import './scss/base/utilities';
+@import './scss/base/animation';
+
+// COMPONENT
+@import './scss/components/btn';
+@import './scss/components/features';
+@import './scss/components/steps';
+@import './scss/components/city';
+@import './scss/components/review';
+@import './scss/components/plan';
+@import './scss/components/suggestion';
+@import './scss/components/sidemenu';
+// LAYOUT
+@import './scss/layout/grid';
+@import './scss/layout/nav';
+@import './scss/layout/gallery';
+@import './scss/layout/footer';
+
+// PAGES
+@import './scss/pages/home';

@@ -1,0 +1,14 @@
+.row {
+  max-width: 130rem;
+  width: 100%;
+  padding: 0 1.2rem;
+  margin: auto;
+
+  @include respond(viewport) {
+    max-width: 120rem;
+  }
+
+  @include respond(tab-land) {
+    max-width: 90rem;
+  }
+}

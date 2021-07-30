@@ -1,0 +1,74 @@
+.suggestion__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 5rem 0;
+
+  @include respond(mobile-lg) {
+    margin: 3rem 0;
+  }
+}
+
+.form {
+  &__control {
+    width: 60rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond(mobile-md) {
+      width: 100%;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+
+  &__label {
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+
+  &__field {
+    width: 25rem;
+    height: 4rem;
+    font-family: inherit;
+    font-size: 2rem;
+    outline: none;
+    padding: 0.5rem 0;
+    &::placeholder {
+      color: rgb(208, 198, 198);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__options {
+    width: 25rem;
+    height: 4rem;
+    font-size: 2rem;
+    font-family: inherit;
+    color: rgb(208, 198, 198);
+
+    &:focus {
+      color: $footer-black;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 2rem;
+    color: $footer-black;
+    font-family: inherit;
+    width: 25rem;
+
+    input[type='checkbox'] {
+      height: 4rem;
+      width: 2rem;
+    }
+  }
+}

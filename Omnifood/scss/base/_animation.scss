@@ -1,0 +1,19 @@
+.slide-left {
+  transform: translateX(-20rem);
+  opacity: 0;
+  animation: slide 1s ease-in forwards;
+}
+
+.slide-right {
+  transform: translateX(20rem);
+  opacity: 0;
+
+  animation: slide 1s ease-in forwards;
+}
+
+@keyframes slide {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

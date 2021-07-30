@@ -1,0 +1,88 @@
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-column-gap: 5rem;
+
+  @include respond(tab-land) {
+    grid-template-columns: 0.7fr;
+    grid-template-rows: repeat(3, max-content);
+    justify-content: center;
+  }
+
+  @include respond(mobile-md) {
+    grid-template-columns: 0.8fr;
+  }
+}
+
+.review {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.5rem;
+  height: 27rem;
+  margin-top: 4rem;
+
+  @include respond(tab-land) {
+    height: 18rem;
+
+    &:not(:last-child) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  @include respond(mobile-lg) {
+    width: 100%;
+    height: auto;
+    gap: 2rem;
+  }
+
+  &__text {
+    font-style: italic;
+    font-size: 2.5rem;
+    color: $white;
+
+    @include respond(mobile-lg) {
+      font-size: 2.1rem;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__image {
+      height: 6rem;
+      border-radius: 50%;
+      margin-top: 2rem;
+
+      @include respond(mobile-lg) {
+        height: 5rem;
+      }
+    }
+
+    &__name {
+      color: $white;
+      font-style: italic;
+      font-size: 1.7rem;
+      margin-left: 1.1rem;
+      font-weight: 300;
+
+      @include respond(mobile-lg) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: '\201C';
+    display: block;
+    font-size: 10rem;
+    font-style: italic;
+    color: $white;
+    top: -6rem;
+    left: -2rem;
+  }
+}

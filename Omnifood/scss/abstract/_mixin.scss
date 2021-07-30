@@ -1,0 +1,49 @@
+@mixin respond($screen) {
+  @if $screen == viewport {
+    @media only screen and (max-width: 84.37em) {
+      @content;
+    }
+  }
+
+  @if $screen == font {
+    @media only screen and (max-width: 73.75em) {
+      @content;
+    }
+  }
+
+  @if $screen == tab-land {
+    @media only screen and (max-width: 66.875em) {
+      @content;
+    }
+  }
+
+  @if $screen == menuIcon {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $screen == tab-port {
+    @media only screen and (max-width: 50.25em) {
+      @content;
+    }
+  }
+
+  @if $screen == mobile-lg {
+    @media only screen and (max-width: 46.875em) {
+      @content;
+    }
+  }
+
+  @if $screen == mobile-md {
+    @media only screen and (max-width: 34.375em) {
+      @content;
+    }
+  }
+
+  @if $screen == mobile-sm {
+    @media only screen and (max-width: 28.125em) {
+      @content;
+    }
+  }
+}

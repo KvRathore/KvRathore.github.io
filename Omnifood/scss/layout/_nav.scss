@@ -1,0 +1,190 @@
+.nav {
+  width: 100%;
+  min-height: 50vh;
+  max-height: 100vh;
+  height: 100vh;
+
+  background: linear-gradient(rgba($black, 0.6), rgba($black, 0.6)),
+    url(./images/hero.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+
+  // NAVIGATION
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    position: relative;
+    z-index: 5;
+  }
+
+  &__logo {
+    width: 12rem;
+    height: auto;
+
+    @include respond(mobile-lg) {
+      width: 10rem;
+    }
+
+    @include respond(mobile-md) {
+      width: 9rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond(menuIcon) {
+      display: none;
+    }
+  }
+
+  &__item {
+    display: block;
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $white;
+    font-size: 1.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      width: 0;
+      height: 0.2rem;
+      background: $primary-orange;
+      content: '';
+      bottom: -0.8rem;
+      left: 0;
+      transition: width 0.5s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  &__navigation.hidden {
+    position: fixed;
+    top: 0;
+    max-width: 120rem;
+    margin: auto;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    padding: 2rem 2rem;
+    background: $footer-black;
+  }
+}
+
+// FIXED NAV
+
+// MENU BUTTON
+.menu-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 8rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  display: none;
+
+  @include respond(menuIcon) {
+    display: flex;
+  }
+
+  @include respond(mobile-md) {
+    right: 1.5rem;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  @include respond(mobile-sm) {
+    right: 0rem;
+  }
+}
+
+.menu-btn__burger {
+  width: 5rem;
+  height: 0.5rem;
+  background: #fff;
+  border-radius: 1rem;
+  transition: all 0.2s ease-in-out;
+
+  @include respond(mobile-md) {
+    width: 4rem;
+    height: 0.3rem;
+  }
+}
+
+.fixed-nav-btn__burger {
+  background: $footer-black;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 5rem;
+  height: 0.5rem;
+  background: #fff;
+  border-radius: 1rem;
+  transition: 0.5s ease-in-out;
+
+  @include respond(mobile-md) {
+    width: 4rem;
+    height: 0.3rem;
+  }
+}
+
+.fixed-nav-btn__burger::before,
+.fixed-nav-btn__burger::after {
+  background: $footer-black;
+}
+
+.menu-btn__burger::before {
+  transform: translateY(-1.6rem);
+}
+
+.menu-btn__burger::after {
+  transform: translateY(1.6rem);
+}
+
+// ANIMATION MENU BTN
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-5rem);
+  background: transparent;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(2.5rem, -2.5rem);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(2.5rem, 2.5rem);
+}

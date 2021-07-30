@@ -1,0 +1,107 @@
+.footer {
+  background: $footer-black;
+  padding: 3rem 0;
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond(mobile-lg) {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }
+
+  &__credits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+
+    .name {
+      text-decoration: underline;
+      color: #777;
+
+      &:hover {
+        color: $dark-grey;
+      }
+    }
+  }
+}
+
+.brand {
+  &__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    @include respond(mobile-md) {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 2rem;
+
+      @include respond(mobile-md) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #777;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $dark-grey;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+  }
+
+  &__social {
+    height: 3.5rem;
+    width: 3.5rem;
+    fill: #777;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__fb {
+    &:hover {
+      fill: #4267b2;
+    }
+  }
+
+  &__twitter {
+    &:hover {
+      fill: #1da1f2;
+    }
+  }
+
+  &__google {
+    &:hover {
+      fill: #db4a39;
+    }
+  }
+
+  &__insta {
+    &:hover {
+      fill: #833ab4;
+    }
+  }
+}

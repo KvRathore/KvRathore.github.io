@@ -1,0 +1,70 @@
+.underline {
+  width: 100%;
+  text-align: center;
+  margin: 4rem 0;
+
+  @include respond(mobile-lg) {
+    margin: 3rem 0;
+  }
+}
+
+.underline span {
+  display: inline-block;
+  width: 25rem;
+  height: 0.3rem;
+  background: $primary-orange;
+
+  @include respond(mobile-lg) {
+    height: 0.2rem;
+  }
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-black {
+  color: $footer-black;
+}
+
+.text-orange {
+  color: $primary-orange;
+}
+
+.text-grey {
+  color: #777;
+}
+
+.u-margin-lg {
+  margin-top: 7rem;
+
+  @include respond(mobile-lg) {
+    margin-top: 5rem;
+  }
+}
+
+.u-margin-md {
+  margin-top: 4rem;
+
+  @include respond(mobile-lg) {
+    margin-top: 3rem;
+  }
+}
+
+.u-marign-sm {
+  margin-top: 2.5rem;
+}
+
+// width
+.u-width-8 {
+  width: 80%;
+  margin: auto;
+
+  @include respond(mobile-lg) {
+    width: 60%;
+  }
+
+  @include respond(mobile-md) {
+    width: 80%;
+  }
+}

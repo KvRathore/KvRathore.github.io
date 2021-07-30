@@ -1,0 +1,49 @@
+.section-features {
+  padding: 12rem 0;
+  background: $dark-grey;
+}
+
+.section-steps {
+  background: $dark-grey;
+  padding: 10rem 0;
+}
+
+.section-cities {
+  padding: 10rem 0;
+}
+
+.section-reviews {
+  background: linear-gradient(rgba($black, 0.7)),
+    url('./images/back-customers.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 10rem 0;
+}
+
+.section-plans {
+  background: $dark-grey;
+  padding: 10rem 0;
+}
+
+.section-suggestion {
+  padding: 10rem 0;
+}
+
+.animate-section {
+  transition: all 0.4s;
+}
+
+.phone .hidden {
+  transform: translateX(-100rem);
+  opacity: 0;
+}
+
+.animate-phone {
+  opacity: 1;
+  transition: all 0.8s ease-in;
+}
+
+.animate-section.hidden {
+  opacity: 0;
+}

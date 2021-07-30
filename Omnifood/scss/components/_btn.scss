@@ -1,0 +1,38 @@
+.btn {
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  width: 18rem;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-radius: 100px;
+  font-size: 1.7rem;
+  font-weight: 100;
+
+  transition: all 0.4s;
+
+  @include respond(mobile-lg) {
+    width: 15rem;
+  }
+
+  &-orange {
+    background: $primary-orange;
+    color: $white;
+
+    &:hover {
+      background: darken($color: $primary-orange, $amount: 8);
+    }
+  }
+
+  &-outline-orange {
+    color: $primary-orange;
+    border: 0.1rem solid $primary-orange;
+    margin-left: 2rem;
+
+    &:hover {
+      color: $white;
+      background: darken($color: $primary-orange, $amount: 8);
+    }
+  }
+}
