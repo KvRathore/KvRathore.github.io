@@ -1087,8 +1087,8 @@ p.para-secondary {
   min-height: 50vh;
   max-height: 100vh;
   height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(./images/hero.jpg) no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./images/hero.jpg) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("./Images/hero.JPG") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./Images/hero.JPG") no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -1499,8 +1499,8 @@ p.para-secondary {
 }
 
 .section-reviews {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7))), url("./images/back-customers.jpg") no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.7)), url("./images/back-customers.jpg") no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7))), url("./Images/back-customers.jpg") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7)), url("./Images/back-customers.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
